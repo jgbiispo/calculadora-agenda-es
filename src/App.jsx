@@ -40,9 +40,9 @@ export default function App() {
             Parâmetros
           </div>
           <div className={styles.controls}>
-            <SliderControl label="Senhas online (base)" min={2} max={40} value={onlineBase} onChange={setOnlineBase} />
+            <SliderControl label="Senhas online (base)" min={2} max={100} value={onlineBase} onChange={setOnlineBase} />
             <SliderControl label="Senhas extra online"  min={0} max={20} value={extra}      onChange={setExtra} />
-            <SliderControl label="Atendentes"           min={1} max={6}  value={nAtend}     onChange={setNAtend} />
+            <SliderControl label="Atendentes"           min={1} max={20}  value={nAtend}     onChange={setNAtend} />
             <SliderControl label="Min. por atendimento" min={10} max={90} value={duracao}   onChange={setDuracao} display={`${duracao} min`} />
             <TimeControl   label="Início"  value={inicio} onChange={setInicio} />
             <TimeControl   label="Fim"     value={fim}    onChange={setFim} />
@@ -65,7 +65,7 @@ export default function App() {
 
         {faltam > 0 && (
           <div className={styles.warn}>
-            ⚠ Faltam {faltam} slots para cobrir todas as senhas — reduza o tempo de atendimento ou aumente os atendentes.
+            Faltam {faltam} slots para cobrir todas as senhas — reduza o tempo de atendimento ou aumente os atendentes.
           </div>
         )}
 
